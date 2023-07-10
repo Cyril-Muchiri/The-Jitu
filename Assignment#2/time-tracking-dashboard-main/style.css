@@ -1,0 +1,174 @@
+body{
+    background-color: hsl(226, 43%, 10%);
+    
+}
+li{
+    list-style: none;
+    color: white;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.full_page{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.main{
+  padding-top: 25%;
+    width: 700px;
+    /* border-style: solid; */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 30% 70%;
+    /* height: 0vh; */
+    
+    
+}
+p{
+    color: white;
+}
+
+.first_div{
+   
+    border-radius: 10px;
+    border-color: brown;
+    /* border-top: 20px; */
+    /* flex-direction: column; */
+   
+    background-color:hsl(235, 46%, 20%) ;
+    /* border-style: solid; */
+    
+    
+   
+
+}
+.name{
+    
+     /* background-color: hsl(235, 45%, 61%);  */
+     background-color: hsl(246, 80%, 60%);
+     border-radius: 8px;
+   height: 25vh;
+    /* display: flex;
+    flex-direction: column; */
+/* border-style: solid; */
+   
+    /* gap: 10px; */
+  padding-left: 15px;
+
+}
+.routine{
+    border-color: blue;
+    /* border-style: solid; */
+    margin-top: 0;
+ display: flex;
+ flex-direction: column;
+ height: 10vh;
+ justify-content: center;
+ padding-left: 15px;
+ gap: 8px;
+ width: auto;
+    background-color: hsl(235, 46%, 20%); 
+    border-radius: 0 0 10px 10px;
+}
+.name img{
+   color: white;
+    border-radius: 60px;
+    border: 5px;
+    /* border-style: solid; */
+    height: 60px;
+    width: 60px;
+}
+.second_div>div{
+    /* border-style: solid; */
+}
+.second_div{
+    /* background-color: darkgray; */
+    display: grid;
+    gap: 10px;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:repeat(2,1fr) ;
+}
+.work{
+    background-color: hsl(15, 100%, 70%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+
+}
+.social{
+    background-color: hsl(264, 64%, 52%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+    /* height: 143px; */
+}
+.Exercise{
+    background-color: hsl(145, 58%, 55%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+    /* height: 143px; */
+}
+.study{
+    background-color: hsl(348, 100%, 68%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+    /* height: 143px; */
+}
+.selfcare{
+    background-color: hsl(43, 84%, 65%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+    /* height: 143px; */
+}
+.play{
+    background-color: hsl(195, 74%, 62%);
+    padding-left: 2px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    align-items: end;
+    /* height: 143px; */
+}
+
+.inner_work{
+ background-color: hsl(235, 45%, 61%);
+ border-radius: 10px;
+    border-style: none;
+    color: white;
+ 
+}
+.inner_play, .inner_social, .inner_study ,.inner_selfcare, .inner_exercise{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    
+    
+}
