@@ -8,17 +8,23 @@ li{
     font-size: 10px;
     font-weight: lighter;
 }
-.full_page{
+li:hover{
+    cursor: pointer;
+    color: hsl(264, 64%, 52%);
+}
+.full_page {
     width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     
 }
 .main{
   padding-top: 25%;
+
     width: 700px;
-    /* border-style: solid; */
+    border-style: solid;
     display: grid;
     gap: 10px;
     grid-template-columns: 30% 70%;
@@ -55,6 +61,7 @@ p{
 /* border-style: solid; */
    
     /* gap: 10px; */
+    padding-top: 10px;
   padding-left: 15px;
 
 }
@@ -76,7 +83,7 @@ p{
    color: white;
     border-radius: 60px;
     border: 5px;
-    /* border-style: solid; */
+    border-style: solid;
     height: 60px;
     width: 60px;
 }
@@ -92,76 +99,85 @@ p{
 }
 .work{
     background-color: hsl(15, 100%, 70%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
-    align-items: stretch;
-    flex-direction: row;
+    width: 150px;
+    flex-direction: column;
     align-items: end;
 
 }
 .social{
     background-color: hsl(264, 64%, 52%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: end;
     /* height: 143px; */
 }
 .Exercise{
     background-color: hsl(145, 58%, 55%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: end;
     /* height: 143px; */
 }
 .study{
     background-color: hsl(348, 100%, 68%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: end;
     /* height: 143px; */
 }
 .selfcare{
     background-color: hsl(43, 84%, 65%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: end;
     /* height: 143px; */
 }
 .play{
     background-color: hsl(195, 74%, 62%);
-    padding-left: 2px;
+    /* padding-left: 2px; */
     border-radius: 10px;
     border-style: none;
     display: flex;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: end;
     /* height: 143px; */
 }
+.inner_work,.inner_play,.inner_selfcare,.inner_social,.inner_exercise>div{
+    padding-left: 2px;
+}
 
 .inner_work{
- background-color: hsl(235, 45%, 61%);
+ background-color: hsl(235, 46%, 20%);
  border-radius: 10px;
-    border-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     color: white;
+    height: 120px;
+    width: 100%;
+   flex-grow: calc(1);
+   
  
 }
 .inner_play, .inner_social, .inner_study ,.inner_selfcare, .inner_exercise{
@@ -169,6 +185,44 @@ p{
     border-radius: 10px;
     border-style: none;
     color: white;
+    height: 120px;
+    width: 100%;
+    flex-grow: calc(1);
     
     
+    
+}
+
+.inner_work:hover,.inner_play:hover, .inner_social:hover, .inner_study:hover ,.inner_selfcare:hover, .inner_exercise:hover{
+cursor: pointer;
+background-color: hsl(235, 45%, 61%);
+}
+
+.icon{
+    /* border-style: solid; */
+    width: 55%;
+    height:4vh;
+    /* padding-left: 70px; */
+}
+.icon_play,.icon_study,.icon_exercise,.icon_social,.icon_selfcare{ 
+    /* border-style: solid; */
+    width: 55%;
+    height:4vh;
+    /* padding-left: 70px; */}
+
+@media screen and (max-width:800px) {
+    .main{
+display: flex;
+flex-direction: column;
+    }
+    .second_div{
+        display: flex;
+flex-direction: column;
+width: 100%;
+
+    }
+    .work{
+        width: 100%;
+    }
+
 }
