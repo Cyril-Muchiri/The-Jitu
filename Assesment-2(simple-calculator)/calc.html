@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calc.css">
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+   <div class="main">
+    <div class="calc">
+        <div class="numberIn">
+            <div class="form">
+              <form action="">
+                <label for="fnumber">Input 1:</label>
+                <input style="width: 150px;border-radius: 10px;background-color: #d9e3f0;" type="number" id="fnumber" name="fnumber" />
+      
+                <label  for="snumber">Input 2:</label>
+                <input style="width: 150px; border-radius: 10px;background-color: #d9e3f0;" type="number" id="snumber" name="snumber" />
+              </form>
+            </div>
+          </div>
+      
+          <div class="operators">
+            <div class="add">
+              <button
+              style="background-color: #c3abad;">+</button>
+            </div>
+      
+            <div class="subtract">
+              <button style="background-color: #b4abc3;">-</button>
+            </div>
+      
+            <div class="divide">
+              <button style="background-color: #abc3ae;">/</button>
+            </div>
+      
+            <div class="multiply">
+              <button style="background-color: #c3aeab;">x</button>
+            </div>
+          </div>
+          <div class="result">
+            <button type="submit">Clear</button>
+          </div>
+          <div class="footer">
+            <div class="toast"></div>
+          </div>
+       </div>
+   </div>
+  </body>
+  <script src="calc.js"></script>
+</html>
