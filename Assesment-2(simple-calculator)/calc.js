@@ -1,4 +1,3 @@
-
 const form = document.querySelector('form');
 const add = document.querySelector('.add button');
 const subtract = document.querySelector('.subtract button');
