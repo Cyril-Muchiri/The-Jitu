@@ -24,7 +24,7 @@ li:hover{
   padding-top: 25%;
 
     width: 700px;
-    border-style: solid;
+    /* border-style: solid; */
     display: grid;
     gap: 10px;
     grid-template-columns: 30% 70%;
@@ -39,7 +39,7 @@ p{
 .first_div{
    
     border-radius: 10px;
-    border-color: brown;
+    /* border-color: brown; */
     /* border-top: 20px; */
     /* flex-direction: column; */
    
@@ -66,7 +66,7 @@ p{
 
 }
 .routine{
-    border-color: blue;
+    /* border-color: blue; */
     /* border-style: solid; */
     margin-top: 0;
  display: flex;
@@ -83,7 +83,7 @@ p{
    color: white;
     border-radius: 60px;
     border: 5px;
-    border-style: solid;
+    /* border-style: solid; */
     height: 60px;
     width: 60px;
 }
@@ -210,10 +210,11 @@ background-color: hsl(235, 45%, 61%);
     height:4vh;
     /* padding-left: 70px; */}
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
     .main{
 display: flex;
 flex-direction: column;
+width: 50vw;
     }
     .second_div{
         display: flex;
