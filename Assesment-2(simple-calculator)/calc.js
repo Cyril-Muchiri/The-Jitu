@@ -43,6 +43,7 @@ function performOperation(operator) {
 function showResult(message) {
     toast.textContent = message;
     toast.classList.add('show');
+    
   }
 
 function clearForm() {
