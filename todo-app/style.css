@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+li:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+ .clear:hover, .remaining:hover{
+    cursor: pointer;
+    color:  blue;;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border-style: solid;border-color: brown; */
+}
+
+.upper{
+    /* background-image: linear-gradient(to right, blue, violet); */
+   background-image: url(images/bg-desktop-dark.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    /* border-style: solid;border-color: brown; */
+}
+
+.upper-inner{
+    /* border-style: solid;border-color: blue; */
+    
+    padding-top: 5vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+}
+
+#radio{
+    background-color: hsl(235, 24%, 19%);
+    border: none;
+    color: grey;
+    padding:10px;
+    
+}
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(46% at 50% 50%);
+}
+
+input[type="text"]{
+    padding: 10px;
+    width: 60%;
+    background-color: hsl(235, 24%, 19%);
+    border: none;
+    outline: none;
+    color: grey;
+    /* border-style: solid;border-color: brown; */
+}
+
+.lower{
+    background-color: hsl(235, 21%, 11%);
+    /* border-style: solid;border-color: brown; */
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lower-inner{
+    background-color: hsl(235, 24%, 19%); 
+    /* border-style: solid;border-color: brown; */
+    height: 40vh;
+    width: 39vw;
+    /* border-radius: 5px; */
+    border-radius: 5px 5px 0px 0px;
+    margin-top: -20px;
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    color: white;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 39vw;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 0px 0px 5px 5px;
+    height: 5vh;
+    /* border-style: solid;border-color: brown; */
+}
+.footer > div{
+    /* display: flex;
+    flex-direction: row; */
+    /* border-style: solid; */
+    /* justify-content: space-between; */
+    border-color: brown;
+    color: grey;
+}
+.activity{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.taskitem{
+    display: flex;
+    padding: 10px;
+    border-bottom: grey 1px solid;
+    color: white;
+    /* border-style: solid;border-color: brown; */
+}
+
+.taskitem > div{
+    margin-left: 10px;
+}
