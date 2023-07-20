@@ -1,11 +1,17 @@
 /* // twitter blue */
-.page{
-    display: flex;
-    justify-content: center;
+.page {
+  display: flex;
+  justify-content: center;
 }
-.main{
-    width: 95vw;
-    border-style: solid;
+.main {
+  background-color: #f5f8fa;
+  width: 95vw;
+  /* height: 100vh; */
+  /* border-style: solid; */
+  
+}
+.sectionA {
+  background-color: #e1e8ed;
 }
 .top_bio {
   background-color: #1da1f2;
@@ -14,36 +20,117 @@
   display: flex;
   justify-content: space-around;
 }
-li{
-    list-style: none;
-    line-height: 25px;
+li {
+  list-style: none;
+  line-height: 25px;
 }
-.profile_pic{
-    /* margin-left: 20px; */
-    width: 120px;
-    height: 120px;
-    /* border-style: solid; */
-    /* border-radius: 60px; */
-    
+
+website-hover:hover {
+  color: blue; 
+  cursor: pointer; 
+  
 }
-.search{
-    color: white;
-    padding-top: 20px;
+select{
+  border-radius: 5px;
 }
-.bio_description{
-    /* border-style: solid; */
-    width: 100%;
-    margin-top: 48px;
-    font-size: 12px;
-    
+.profile_pic {
+  /* margin-left: 20px; */
+  width: 120px;
+  height: 120px;
+  /* border-style: solid; */
+  /* border-radius: 60px; */
 }
-.bio_description>div{
-    width: 40vw;
-    /* border-style: solid; */
-    margin-left: 40px;
+.search {
+  color: white;
+  padding-top: 20px;
 }
-.feed{
-    height: 10vh;
-    width: 100%;
-    border-style: solid;
+/* .bio_description {
+  border-style: solid;
+  width: 100%;
+  margin-top: 48px;
+  font-size: 12px;
+} */
+.bio_description > div {
+  width: 40vw;
+  /* border-style: solid; */
+  margin-left: 30px;
 }
+.feed {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* height: 100vh; */
+  /* width: 100%; */
+  /* border-style: solid;  */
+  border-color: brown;
+  
+}
+.chat-item{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* border-style: solid; */
+  border-color: brown;
+  gap: 5px;
+ 
+}
+.chat-item img{
+  grid-row: span 3;
+  /* border-style: solid; */
+  width:100px;
+  /* height:100px; */
+  
+
+}
+.reactions{
+  display: flex;
+  justify-content: end;
+  gap: 92px;
+  /* border-style: solid; */
+  border-color: chartreuse;
+}
+.reactions img{
+  height: 20px;
+  width: 20px;
+ 
+}
+
+.comments{
+  
+  border-style: solid;
+}
+
+.chats {
+ 
+ 
+  /* height: 40px; */
+  width: 40vw;
+  /* grid-row: span 2; */
+  /* border-style: solid; */
+}
+/* .comment_button img{
+    width: 20px;
+    height: 20px;
+} */
+/* .ff {
+  border-style: solid;
+  height: 40px;
+} */
+
+.feed > div {
+  /* border-style: solid; */
+  /* grid-column: 1 / span 2; */
+}
+@media screen and (max-width: 810px) {
+  .feed {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+  }
+  .feed > div {
+    width: 85%;
+  }
+}
+/* #users{
+    width: fit-content;
+   
+} */
