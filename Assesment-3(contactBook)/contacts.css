@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+    .main{
+        margin-top: 5vh;
+        border-style: solid;
+        border-radius: 4px;
+        height: 70vh;
+        width: 50vw;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+        border-style: solid;
+        height: 6vh;
+    }
+
+
+    .addClass{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .addClass button{
+        font-size: 30px;
+        color: blueviolet;
+        width: 60px;
+        height: 40px;
+
+    }
+    .bottomSection{
+        border-style: solid;
+    }
