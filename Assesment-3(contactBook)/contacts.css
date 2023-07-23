@@ -4,17 +4,18 @@ body{
 }
 
     .main{
+        
         margin-top: 5vh;
         border-style: solid;
         border-radius: 4px;
-        height: 70vh;
-        width: 50vw;
+        /* height: 60vh; */
+        width: 50%;
     }
 
     .header{
         display: flex;
         justify-content: center;
-        border-style: solid;
+        /* border-style: solid; */
         height: 6vh;
     }
 
@@ -24,6 +25,7 @@ body{
         justify-content: flex-end;
     }
     .addClass button{
+        margin-right: 5px;
         font-size: 30px;
         color: blueviolet;
         width: 60px;
@@ -31,5 +33,39 @@ body{
 
     }
     .bottomSection{
-        border-style: solid;
+        margin-top: 30px;
+        /* border-style: solid; */
+        height: 30vh;
     }
+    .contactCard{
+        display: flex;
+        flex-direction: column;
+        /* border-style: solid; */
+        gap: 20px;
+    }
+    .user{
+        margin-left: 30px;
+        display: flex;
+        flex-direction: row;
+        /* border-style: solid;
+        border-color: brown; */
+       /* justify-content: space-evenly;  */
+        gap: 100px;
+    }
+    .container{
+        display: flex;
+    }
+  .name{
+width: 30px;
+  }
+  .number{
+    width: 30px;
+  }
+  @media screen and (max-width:672px) 
+  {
+    .main{
+        width: 673px;
+    }
+  }
+  
+   
