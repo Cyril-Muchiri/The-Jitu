@@ -96,7 +96,7 @@ select{
 
 .comments{
   
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 .chats {

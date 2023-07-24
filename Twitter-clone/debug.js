@@ -15,6 +15,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
       var option = document.createElement('option');
       option.value = user.id;
       option.textContent = user.name;
+      
       selectElement.appendChild(option);
       
     });
@@ -147,46 +148,60 @@ function populateChat(userId) {
           .then(comments=>{
       
             commentsResult.innerHTML='';
+        for (let index = 0; index < 20 ; index++) {
+
+          // const element = comments[index];
+          // console.log(element);
+
+          const commentItem = document.createElement('div');
+          commentItem.classList.add('comment-item');
+          
+
+          // const reactionsComment=document.createElement('div');
+          const reactions=document.createElement('div');
+          reactions.classList.add('reactions');
+          reactions.style.justifyContent="start";
+          reactions.style.gap="30px";
+  
+          const commentBody = document.createElement('div');
+          commentBody.textContent = post.body;
+          commentBody.style.fontSize="12px";
+
+          const commentsBtn=document.createElement('div');
+          commentsBtn.classList.add('commentBtn');
+  
+          const retweetBtn=document.createElement('div');
+          retweetBtn.classList.add('retweet');
+  
+          const likeBtn=document.createElement('div');
+          likeBtn.classList.add('likeBtn');
+
+          const retweet=document.createElement('img');
+          retweet.src="/assets/icons-retweet.png";
+          reactions.appendChild(retweet);
+  
+          const like=document.createElement('img');
+          like.src="/assets/icons-like.png";
+          reactions.appendChild(like);
+
+          const horizontalLine = document.createElement('hr');
+          commentItem.appendChild(horizontalLine);
+
+          commentItem.appendChild(commentBody);
+          commentItem.appendChild(reactions);
+
+         
+          commentsResult.appendChild(commentItem);
+          
+        }
+            
             comments.forEach(comment=>{
-              const commentItem = document.createElement('div');
-              commentItem.classList.add('comment-item');
+             
               
-
-              // const reactionsComment=document.createElement('div');
-              const reactions=document.createElement('div');
-              reactions.classList.add('reactions');
-              reactions.style.justifyContent="start";
-              reactions.style.gap="30px";
-      
-              const commentBody = document.createElement('div');
-              commentBody.textContent = post.body;
-              commentBody.style.fontSize="12px";
-
-              const commentsBtn=document.createElement('div');
-              commentsBtn.classList.add('commentBtn');
-      
-              const retweetBtn=document.createElement('div');
-              retweetBtn.classList.add('retweet');
-      
-              const likeBtn=document.createElement('div');
-              likeBtn.classList.add('likeBtn');
-
-              const retweet=document.createElement('img');
-              retweet.src="/assets/icons-retweet.png";
-              reactions.appendChild(retweet);
-      
-              const like=document.createElement('img');
-              like.src="/assets/icons-like.png";
-              reactions.appendChild(like);
-
-              const horizontalLine = document.createElement('hr');
-              commentItem.appendChild(horizontalLine);
-
-              commentItem.appendChild(commentBody);
-              commentItem.appendChild(reactions);
-
-              commentsResult.appendChild(commentItem);
-      
+               
+              
+             
+            
             })
           //   const commentDiv=document.createElement('div');
           //   commentDiv.textContent = comments.body;

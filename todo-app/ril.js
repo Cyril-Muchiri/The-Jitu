@@ -1,6 +1,6 @@
 let alltasks = [];
 
-// get tasks if exists
+// get locally stored tasks if exists
 if (localStorage.getItem('tasks')) {
   alltasks = JSON.parse(localStorage.getItem('tasks'));
 }
@@ -97,7 +97,7 @@ sortCompleted.addEventListener('click', () => {
 clear.addEventListener('click', () => {
   alltasks = alltasks.filter((task) => !task.checked);
   renderTasks();
-
+//clear local storage on click-clear
   localStorage.setItem('tasks', JSON.stringify(alltasks));
 });
 

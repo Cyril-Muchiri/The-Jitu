@@ -8,42 +8,48 @@
 </head>
 <body>
     <div class="main">
-        <div class="upper">
+      
+            <div class="upper">
             
-            <div class="upper-inner">
-             
-                <div style="color:white;font-size:30px; font-weight:bold; margin-bottom: 30px;">
-                    T O D O
-                </div>
-                <form action="" class="inputform">
-                    <div style="display: flex; align-items: center; padding: 2px; background-color: hsl(235, 24%, 19%); border-radius: 5px;">
-                        <div id="radio">
-                            <input type="checkbox" name="" id="checkBox">
-                        </div>
-                        <input type="text" name="" id="new-todo-input" placeholder="Create a new todo">
+                <div class="upper-inner">
+                 
+                    <div class="todo" style="color:white;font-size:30px; font-weight:bold; margin-bottom: 30px;">
+                        T O D O
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="lower">
-            <div class="lower-inner">
-            </div>
-            <div class="footer">
-                <div class="remaining">
-                    <p class="remain">######</p>
+                    <form action="" class="inputform">
+                        <div style="display: flex; align-items: center; padding: 2px; background-color: hsl(235, 24%, 19%); border-radius: 5px;">
+                            <div id="radio">
+                                <input type="checkbox" name="" id="checkBox">
+                            </div>
+                            <input type="text" name="" id="new-todo-input" placeholder="Create a new todo">
+                        </div>
+                    </form>
                 </div>
-                <div class="activity">
-                    <li class="all">All</li>
-                    <li class="active">Active</li>
-                    <li class="completed">Completed</li>
-                </div>
-                <div class="clear">
-                    <p class="clear_btn">Clear Completed</p>
-                </div>
-                
             </div>
-           
-        </div>
+            <div class="lower">
+                <div class="lower-inner">
+                </div>
+                <div class="footer">
+                    <div class="remaining">
+                        <p class="remain">######</p>
+                    </div>
+                    <div class="activity">
+                        <li class="all">All</li>
+                        <li class="active">Active</li>
+                        <li class="completed">Completed</li>
+                    </div>
+                    <div class="clear">
+                        <p class="clear_btn">Clear Completed</p>
+                    </div>
+                    
+                </div>
+               
+            </div>
+       
     </div>
 
     <script src="./ril.js"></script>
