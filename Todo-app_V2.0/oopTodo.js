@@ -1,21 +1,9 @@
-const taskFromLocalStorage = JSON.parse(localStorage.getItem('task'));
 const taskSection = document.querySelector('.taskSection');
 const addButton = document.querySelector('.addButton');
 const selectAll = document.querySelector('.allTasks');
 const selectComplete = document.querySelector('.completedTasks');
 
-// const taskDate = new Date(task.taskDate);
-// const taskStart = new Date(task.taskStart);
-
-// const timeDifferenceInMilliseconds = taskDate - taskStart;
-
-
-// const hours = Math.floor(timeDifferenceInMilliseconds / (1000 * 60 * 60));
-// const minutes = Math.floor((timeDifferenceInMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-// const seconds = Math.floor((timeDifferenceInMilliseconds % (1000 * 60)) / 1000);
-
 let allTasks = [];
-
 
 const tasksFromLocalStorage = JSON.parse(localStorage.getItem('tasks')) || [];
 allTasks = tasksFromLocalStorage;
@@ -23,10 +11,9 @@ allTasks = tasksFromLocalStorage;
 function renderTasks() {
     taskSection.innerHTML = '';
 
-    const showCompleted = selectComplete.checked; 
+    const showCompleted = selectComplete.checked;
 
     allTasks.forEach((task, index) => {
-        
         if (showCompleted && !task.completed) {
             return;
         }
@@ -35,26 +22,21 @@ function renderTasks() {
         taskSection.appendChild(taskElement);
     });
 }
+
 function showCompleteTasks() {
     taskSection.innerHTML = '';
 
     const showCompleted = selectComplete.checked;
 
     allTasks.forEach((task, index) => {
-        // if (!showCompleted && !task.completed) {
-        //     return;
-        // }
-
         if (!showCompleted && !task.completed) {
             return;
         }
-      
 
         const taskElement = createTaskElement(task, index);
         taskSection.appendChild(taskElement);
     });
 }
-
 
 function createTaskElement(task, index) {
     const taskElement = document.createElement('div');
@@ -76,52 +58,23 @@ function createTaskElement(task, index) {
     const taskDescElement = document.createElement('p');
     taskDescElement.innerText = task.taskDesc;
 
-    
     const taskDateElement = document.createElement('p');
-    // taskDateElement.innerText = task.taskDate - task.taskStart;
-    
-   
 
-// Assuming task.taskDate and task.taskStart are date strings in the format "YYYY-MM-DD HH:MM:SS"
-const taskDate = new Date(task.taskDate);
-const taskStart = new Date(task.taskStart);
+    const taskDate = new Date(task.taskDate);
+    const taskStart = new Date(task.taskStart);
+    const taskCompletionDate = new Date(task.taskCompletionDate);
 
-// Calculate the time difference in milliseconds
-const timeDifferenceInMilliseconds = taskDate - taskStart;
+    if (task.completed && taskCompletionDate <= taskDate) {
+        const completedDaysEarlier = Math.floor((taskDate - taskCompletionDate) / (1000 * 60 * 60 * 24));
+        taskDateElement.innerText = `Completed ${completedDaysEarlier} days earlier`;
+    } else {
+        const timeDifferenceInMilliseconds = taskDate - taskStart;
+        const timeDifferenceInSeconds = Math.floor(timeDifferenceInMilliseconds / 1000);
+        const days = Math.floor(timeDifferenceInSeconds / (3600 * 24));
+        taskDateElement.innerText = `Task due: ${days} days remaining`;
+    }
 
-//convet time
-const timeDifferenceInSeconds = Math.floor(timeDifferenceInMilliseconds / 1000);
-const hours = Math.floor(timeDifferenceInSeconds / 3600);
-let days =Math.floor(hours/24);
-const minutes = Math.floor((timeDifferenceInSeconds % 3600) / 60);
-const seconds = timeDifferenceInSeconds % 60;
-
-
-let formattedTimeDifference = `${days} days remaining`;
-const deadlinedTask = 'Task overdue by ${days}  days';
-const earlyTask ='Task completed early by ${days} days'
-
-const showCompleted = selectComplete.checked;
-
-// if (showCompleted && days>1) {
-//      formattedTimeDifference = `Task done early by ${days} days`;
-//     taskDateElement.innerText=formattedTimeDifference;
-
-// } else if(!showCompleted && days<2) {
-//     formattedTimeDifference = `Overdue by ${days} day`;
-//     taskDateElement.innerText=formattedTimeDifference;
-
-// }else{
-//     taskDateElement.innerText = formattedTimeDifference;
-// }
-
-taskDateElement.innerText = formattedTimeDifference;
-
-
-
-    // taskDateElement.innerText = `Time difference: ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
-
-    const delDiv=document.createElement('div');
+    const delDiv = document.createElement('div');
     delDiv.classList.add('deleteDiv');
 
     const deleteButton = document.createElement('button');
@@ -131,27 +84,17 @@ taskDateElement.innerText = formattedTimeDifference;
     deleteButton.addEventListener('click', () => {
         deleteTask(index);
     });
-    const breakerDiv =document.createElement('div');
-    breakerDiv.classList.add('breakerDiv');
-
-    const breaker = document.createElement('hr');
-    breaker.style.width="30vw"
-    breakerDiv.appendChild(breaker);
 
     taskDetails.appendChild(taskNameElement);
     taskDetails.appendChild(taskDescElement);
-
     taskDetails.appendChild(taskDateElement);
 
     taskElement.appendChild(checkButton);
     taskElement.appendChild(taskDetails);
-    // taskDateElement.appendChild(breakerDiv);
     taskElement.appendChild(delDiv);
 
     return taskElement;
 }
-
-
 
 function toggleTaskStatus(index) {
     allTasks[index].completed = !allTasks[index].completed;
@@ -169,26 +112,14 @@ function saveTasksToLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(allTasks));
 }
 
-
-// renderTasks();
-
-
 addButton.addEventListener('click', () => {
-    // allTasks = [];
-    // localStorage.removeItem('tasks');
-    // renderTasks();
-    window.location.href='newTodo.html';
+    window.location.href = 'newTodo.html';
 });
 
-
 selectAll.addEventListener('click', () => {
-
     renderTasks();
-    console.log('clicked');
 });
 
 selectComplete.addEventListener('click', () => {
-    console.log('clicked!!');
-    showCompleteTasks();
+    renderTasks();
 });
-

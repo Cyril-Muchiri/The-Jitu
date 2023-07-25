@@ -58,10 +58,13 @@ h1{
 .taskSection{
     display: flex;
     flex-direction: column;
+    /* background-color: #EDEDED; */
+    background-color: #E4E5E4;
+    border-radius: 10px;
     gap: 15px;
-    margin-left: 15px;
+    margin-left: 23px;
     width: 90%;
-    border-style: solid;
+    /* border-style: solid; */
     border-color:brown ;
     height: 58vh;
 }
@@ -118,11 +121,22 @@ p{
        width: 450px;
        height: 70vh;
 }
-.formName,.formDescription ,.formDate{
+.formName,.formDescription ,.formDate ,.formStart{
     background-color:honeydew ;
     font-size: 20px;
     outline-style: none;
     border-style: none;
+}
+.taskDates{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    /* justify-content: space-around; */
+}
+label{
+    margin-left: 25%;
+    opacity: 40%;
+    
 }
 hr{
     width: 400px;
