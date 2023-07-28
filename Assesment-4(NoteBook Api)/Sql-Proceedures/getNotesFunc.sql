@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getNotesFunc
+AS
+BEGIN 
+SELECT * FROM notesTable
+END
