@@ -15,7 +15,7 @@ const createNote = async (req, res) => {
     const pool = await mssql.connect(sqlConfig);
 
     if (pool.connected) {
-      console.log("connected");
+      // console.log("connected");
       const result = await pool
         .request()
         .input("id", id)
@@ -23,9 +23,17 @@ const createNote = async (req, res) => {
         .input("content", content)
 
         .execute("createNoteFunc")
-        console.log(result);
-        return res.status(200).json({'data':result.recordset})
-    }
+        // console.log(result);
+        // return res.status(200).json({'data':result.recordset})
+
+        if(result.rowsAffected == 1){
+          return res.json({
+              message: "New Note created Successfully",
+          })  
+          }else{
+              return res.json({message: "Creation failed!!"})
+          } 
+        }
   } catch (error) {
     return res.json({ error });
   }
@@ -36,9 +44,9 @@ const getNotes = async (req, res) => {
     const pool = await mssql.connect(sqlConfig);
     // console.log(req.app.locals.db)
 
-    const allnotes = (await pool.request().execute("getNotesFunc")).recordset;
+    const allNotes = (await pool.request().execute("getNotesFunc")).recordset;
 
-    res.json({ notes: allnotes });
+    return res.json({ notes: allNotes });
   } catch (error) {
     return res.json({ error });
   }
@@ -100,7 +108,9 @@ const deleteNote = async (req, res) => {
 
     const pool = await mssql.connect(sqlConfig);
 
-    const result = await pool.request().input("id", id).execute("deleteNoteFunc");
+    const result = await pool.request()
+    .input("id", id).
+    execute("deleteNoteFunc");
 
     if (result.rowsAffected == 1) {
       res.json({
