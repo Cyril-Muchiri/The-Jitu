@@ -1,8 +1,14 @@
+const main =document.querySelector('.main');
+
 const taskFromLocalStorage = JSON.parse(localStorage.getItem('task'));
 const taskSection = document.querySelector('.taskSection');
 const addButton = document.querySelector('.addButton');
 const selectAll = document.querySelector('.allTasks');
 const selectComplete = document.querySelector('.completedTasks');
+const toogleView =document.querySelector('.view');
+
+
+
 
 // const taskDate = new Date(task.taskDate);
 // const taskStart = new Date(task.taskStart);
@@ -15,6 +21,12 @@ const selectComplete = document.querySelector('.completedTasks');
 // const seconds = Math.floor((timeDifferenceInMilliseconds % (1000 * 60)) / 1000);
 
 let allTasks = [];
+
+toogleView.addEventListener('click',()=>{
+    console.log('clicked');
+main.classList.toggle('darkmode');
+
+});
 
 
 const tasksFromLocalStorage = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -136,7 +148,7 @@ taskDateElement.innerText = formattedTimeDifference;
 
     const breaker = document.createElement('hr');
     breaker.style.width="30vw"
-    breakerDiv.appendChild(breaker);
+    
 
     taskDetails.appendChild(taskNameElement);
     taskDetails.appendChild(taskDescElement);
@@ -146,7 +158,10 @@ taskDateElement.innerText = formattedTimeDifference;
     taskElement.appendChild(checkButton);
     taskElement.appendChild(taskDetails);
     // taskDateElement.appendChild(breakerDiv);
+   
     taskElement.appendChild(delDiv);
+    breakerDiv.appendChild(breaker);
+    // taskElement.appendChild(breakerDiv);
 
     return taskElement;
 }
